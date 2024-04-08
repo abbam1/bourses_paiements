@@ -6394,6 +6394,10 @@ header .form-inline .search-form.close {
   border-color: #28a745 rgba(0, 0, 0, 0) #28a745 rgba(0, 0, 0, 0) !important;
 }
 
+.footer {
+  font-weight: 600 !important;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #008000 !important;
@@ -6402,4 +6406,9 @@ header .form-inline .search-form.close {
 
 a {
   color: green !important;
+}
+
+td {
+  white-space: pre-wrap !important;
+  word-wrap: break-word;
 }
