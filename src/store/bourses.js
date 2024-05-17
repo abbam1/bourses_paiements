@@ -6,6 +6,9 @@ export const useboursesStore = defineStore("bourses", {
     bourses: [],
     clicked_attributions: false,
     clicked_renouvellements: false,
+    login:{},
+    login_token: "",
+
   }),
   getters: {
     //filtre sur le state bourse pour obtenir les bourses types attributions
@@ -35,6 +38,17 @@ export const useboursesStore = defineStore("bourses", {
     },
   },
   actions: {
+    setLogin(payload) {
+      this.login = payload;
+      localStorage.setItem("loginInfo", JSON.stringify(this.login));
+    },
+
+    logOut() {
+      this.login = {};
+      localStorage.removeItem("loginInfo");
+    },
+
+
     //requete axios get pour assigner des données au state bourses
     async obtenir_les_bourses() {
       await axios
@@ -49,5 +63,6 @@ export const useboursesStore = defineStore("bourses", {
       this.clicked_attributions = false;
       this.clicked_renouvellements = false;
     },
+    
   },
 });
