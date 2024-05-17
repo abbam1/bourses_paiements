@@ -3,9 +3,9 @@ export function init_datatables() {
     $("#table_bourse").DataTable({
       destroy: true,
       responsive: true,
-      language: {
-        url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json",
-      },
+      // language: {
+      //   url: "https://cdn.datatables.net/plug-ins/1.10.19/i18n/French.json",
+      // },
       fixedHeader: true,
       initComplete: function () {
         this.api()
